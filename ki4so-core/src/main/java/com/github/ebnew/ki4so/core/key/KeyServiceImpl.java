@@ -40,7 +40,7 @@ public class KeyServiceImpl extends FileSystemDao implements KeyService {
 	 * 外部数据文件地址，优先级更高。
 	 * (用户可以配置)
 	 */
-	public static final String  DEFAULT_EXTERNAL_DATA =  "D:\\workspace\\ki4so\\ki4so-core\\src\\main\\resources\\keys.js";
+	public static final String  DEFAULT_EXTERNAL_DATA =  "/Users/wjj/codeGithub/ki4so/ki4so-core/src/main/resources/keys.js";
 	
 	/**
 	 * 默认的数据文件地址，在classpath下。

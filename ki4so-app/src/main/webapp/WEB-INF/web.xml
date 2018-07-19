@@ -32,19 +32,19 @@
 		<init-param>
 			<description>ki4so服务器主机地址</description>
 			<param-name>ki4soServerHost</param-name>
-			<param-value>http://localhost:8080/ki4so-web/</param-value>
+			<param-value>http://localhost:9999/ki4so-web/</param-value>
 		</init-param>
 		
 		<init-param>
 			<description>ki4so服务器登录地址</description>
 			<param-name>ki4soServerLoginUrl</param-name>
-			<param-value>http://localhost:8080/ki4so-web/login.do</param-value>
+			<param-value>http://localhost:9999/ki4so-web/login.do</param-value>
 		</init-param>
 		
 		<init-param>
 			<description>ki4so服务器获取应用秘钥信息的URL地址</description>
 			<param-name>ki4soServerFetchKeyUrl</param-name>
-			<param-value>http://localhost:8080/ki4so-web/fetchKey.do</param-value>
+			<param-value>http://localhost:9999/ki4so-web/fetchKey.do</param-value>
 		</init-param>
 		
 		<init-param>

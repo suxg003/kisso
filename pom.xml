@@ -200,7 +200,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 				<artifactId>maven-pmd-plugin</artifactId>
 				<configuration>
 					<linkXref>true</linkXref>
-					<targetJdk>1.6</targetJdk>
+					<targetJdk>1.8</targetJdk>
 				</configuration>
 			</plugin>
 			<plugin>

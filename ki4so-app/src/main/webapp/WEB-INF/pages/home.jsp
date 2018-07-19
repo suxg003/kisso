@@ -9,7 +9,7 @@
 <title>Ki4so单点登录系统集成示例</title>
 </head>
 <body>
-<p>这是ki4so集成单点登录系统的示例一个用，演示了如何集成单点登录系统ki4so.</p>
+<p>APP这是ki4so集成单点登录系统的示例一个用，演示了如何集成单点登录系统ki4so.</p>
 <p style="color: red;">
 	单点登录成功，当前登录的用户是：${user.userId}.登录的应用ID是：${user.appId}
 </p>
