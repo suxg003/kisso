@@ -1,6 +1,7 @@
 package com.github.ebnew.ki4so.core.authentication.status;
 
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * 用户登录状态存储器，实现了用户登录状态的存取方法。
@@ -33,7 +34,7 @@ public interface UserLoggedStatusStore {
 	 * @param userId 用户标识。
 	 * @param 用户登录状态。
 	 */
-	public List<UserLoggedStatus> findUserLoggedStatus(String userId);
+	public CopyOnWriteArrayList<UserLoggedStatus> findUserLoggedStatus(String userId);
 	
 
 }

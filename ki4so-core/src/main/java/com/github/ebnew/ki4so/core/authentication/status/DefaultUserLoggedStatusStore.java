@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.springframework.util.StringUtils;
 
@@ -27,9 +28,9 @@ public class DefaultUserLoggedStatusStore implements UserLoggedStatusStore {
 	 * 用户标识和用户状态列表之间的映射表，相当于一个索引，方便根据用户标识查询所有的登录状态标。
 	 * 其中map中的key是用户标识，value是该用户所有的登录状态列表。 
 	 */
-	private Map<String, List<UserLoggedStatus>> userIdIndexMap = new HashMap<String, List<UserLoggedStatus>>();
+	private Map<String, CopyOnWriteArrayList<UserLoggedStatus>> userIdIndexMap = new HashMap<String, CopyOnWriteArrayList<UserLoggedStatus>>();
 	
-	public Map<String, List<UserLoggedStatus>> getUserIdIndexMap() {
+	public Map<String, CopyOnWriteArrayList<UserLoggedStatus>> getUserIdIndexMap() {
 		return userIdIndexMap;
 	}
 
@@ -45,9 +46,9 @@ public class DefaultUserLoggedStatusStore implements UserLoggedStatusStore {
 				userLoggedStatus.setLoggedDate(new Date());
 			}
 			this.loggedStatus.add(userLoggedStatus);
-			List<UserLoggedStatus> list = this.userIdIndexMap.get(userLoggedStatus.getUserId());
+			CopyOnWriteArrayList<UserLoggedStatus> list = this.userIdIndexMap.get(userLoggedStatus.getUserId());
 			if(list==null){
-				list = new ArrayList<UserLoggedStatus>();
+				list = new CopyOnWriteArrayList<UserLoggedStatus>();
 				this.userIdIndexMap.put(userLoggedStatus.getUserId(), list);
 			}
 			list.add(userLoggedStatus);
@@ -80,7 +81,7 @@ public class DefaultUserLoggedStatusStore implements UserLoggedStatusStore {
 
 
 	@Override
-	public List<UserLoggedStatus> findUserLoggedStatus(String userId) {
+	public CopyOnWriteArrayList<UserLoggedStatus> findUserLoggedStatus(String userId) {
 		if(!StringUtils.isEmpty(userId)){
 			return this.userIdIndexMap.get(userId);
 		}
