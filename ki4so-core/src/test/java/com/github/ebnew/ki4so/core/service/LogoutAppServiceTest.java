@@ -85,7 +85,7 @@ public class LogoutAppServiceTest {
 		Mockito.when(appService.findAppById("1001")).thenReturn(serivceApp);
 		Mockito.when(appService.findAppById("1001")).thenReturn(firstApp);
 		Mockito.when(appService.findAppById("1002")).thenReturn(sencondApp);
-		Mockito.when(userLoggedStatusStore.findUserLoggedStatus(userId)).thenReturn(list);
+//		Mockito.when(userLoggedStatusStore.findUserLoggedStatus(userId)).thenReturn(list);
 		
 		logoutAppService.logoutApp(userId, url);
 		

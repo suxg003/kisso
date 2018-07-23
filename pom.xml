@@ -13,7 +13,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 	
 	<properties>
 		<junit.version>4.10</junit.version>
-		<spring.version>3.2.2.RELEASE</spring.version>
+		<spring.version>4.1.9.RELEASE</spring.version>
 		<mockito.version>1.9.0</mockito.version>
 		<ki4so.version>1.0.1-SNAPSHOT</ki4so.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
